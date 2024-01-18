@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;  
+@layer components {
+
+  *{
+    scroll-behavior: smooth;
+  }
+
+  /* HEADER */
+  .header {
+    @apply w-5/6 m-auto py-7 justify-between items-center hidden md:flex
+  }
+
+  .nav {
+    @apply gap-4 font-bold md:flex justify-center items-center
+  }
+
+  /* MOBILE HEADER */
+  .header-mobile {
+    @apply w-5/6 m-auto py-7 justify-between items-center flex md:hidden
+  }
+  
+  /* MAIN */
+  .main {
+    @apply w-full mt-12 flex items-center
+  }
+
+  .plan {
+    @apply text-center font-bold text-2xl md:text-left
+  }
+
+  .title {
+    @apply text-4xl text-center font-bold md:text-5xl md:text-left
+  }
+
+  .paragraph {
+    @apply text-center mt-7 font-medium text-gray-500 text-base md:text-left
+  }
+
+  .btn-rent {
+    @apply flex-grow bg-orange-100 text-white p-4 font-bold rounded-sm flex items-center justify-center md:flex-grow-0
+  }
+
+  .btn-schedule {
+    @apply flex-grow bg-black text-white p-4 font-bold rounded-sm flex items-center justify-center md:flex-grow-0
+  }
+
+  .image-main {
+    @apply hidden md:inline
+  }
+
+  .buttons-main {
+    @apply flex justify-between md:justify-start mt-7 gap-3
+  }
+
+  /* CONTENT BOX */
+  .content {
+    @apply w-full h-auto p-5 flex flex-col justify-center mt-32 mb-32 rounded-sm shadow-lg
+  }
+
+  .content-box-form {
+    @apply grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3
+  }
+
+  .icon {
+    @apply text-orange-100 text-xl
+  }
+
+  .content label {
+    @apply text-base font-semibold mb-4 flex items-center
+  }
+
+  .content select {
+    @apply bg-zinc-200 p-3 border border-zinc-300 rounded-sm text-zinc-500 font-medium
+  }
+
+  .content input {
+    @apply border border-zinc-300 text-zinc-500
+  }
+
+  .btn-search {
+    @apply w-full h-16 lg:h-full bg-orange-100 text-white text-lg font-bold rounded-sm flex items-center justify-center
+  }
+
+  /* PLAN TRIP */
+  .plan-section {
+    @apply flex flex-col items-center mt-16
+  }
+
+  .plan-section h2 {
+    @apply text-center text-2xl font-semibold mb-3
+  }
+
+  .plan-section h1 {
+    @apply text-center text-4xl font-extrabold mb-3 
+  }
+
+  .plan-boxes {
+    @apply mt-16 gap-8 lg:flex
+  }
+
+  .plan-boxes-box {
+    @apply w-96 h-80 flex flex-col items-center
+  }
+
+  .plan-boxes-box h3 {
+    @apply text-xl text-center font-extrabold mb-5
+  }
+
+  .plan-boxes-box p {
+    @apply w-72 text-center text-gray-500 text-base
+  }
+
+  /* PICK CAR */
+  .pick-car {
+    @apply mt-16 mb-16 
+  }
+
+  .pick-car-title {
+    @apply text-center
+  }
+
+  .pick-car-title h2 {
+    @apply text-2xl font-semibold mb-3
+  }
+
+  .pick-car-title h1 {
+    @apply text-4xl font-extrabold mb-3
+  }
+
+  .pick-car-title p {
+    @apply text-gray-500 text-base mt-5 mb-16
+  }
+
+  .pick-container {
+    @apply flex justify-between items-center relative
+  }
+
+  .pick-container h3 {
+    @apply text-lg font-bold
+  }
+
+  .pick-container p {
+    @apply text-gray-500 text-base
+  }
+
+  .pick-container-car {
+      @apply flex flex-col justify-between items-center text-center brightness-75
+  }
+
+  .main-car {
+    @apply w-60 md:w-[300px] m-auto
+  }
+
+  .main-car img {
+    @apply m-auto md:w-[300px]
+  }
+
+  .left, .right {
+    @apply hidden lg:block
+  }
+
+  .pick-container-car-prev {
+    @apply hidden text-2xl rounded-full p-2 border border-zinc-600 cursor-pointer
+  }
+
+  .pick-container-car-next {
+    @apply hidden text-2xl rounded-full p-2 border border-zinc-600 cursor-pointer
+  } 
+
+  /* LOGIN */
+  .login-card {
+    @apply flex items-center justify-center mt-12
+  }
+
+  .login-card-form {
+    @apply flex flex-col p-4
+  }
+
+  .login-title {
+    @apply mb-3  text-2xl text-center font-bold md:text-left
+  }
+
+  .form-login {
+    @apply w-72 md:w-96;
+  }
+
+  /* CAR MODELS */
+  .models {
+    @apply w-5/6 mx-auto
+  }
+
+  .models-car {
+    @apply w-full gap-5 rounded-sm grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-12
+  }
+  .cars {
+    @apply w-auto sm:w-[300px] h-[450px] md:w-[320px] p-5 rounded-lg flex flex-col items-center justify-center shadow-xl mx-auto
+  }
+
+  .models-button {
+    @apply w-full h-10 text-center text-white font-normal bg-orange-100 rounded-sm
+  }
+
+  /* RENT CAR */
+  .rent-car {
+    @apply w-5/6 mx-auto mb-16
+  }
+
+  .rent-car-car {
+    @apply w-auto sm:w-[300px] h-[500px] md:w-[350px] p-5 rounded-lg flex flex-col items-center justify-center 
+  }
+
+  /* Regitration And Personal Data */
+
+  .form {
+    @apply w-full grid grid-cols-1  md:grid-cols-2 gap-3 mx-auto
+  }
+
+  .input-registration-form {
+    @apply w-auto border-b border-black outline-none focus:border-orange-100 py-2
+  }
+
+  .label-registration-form {
+    @apply font-semibold
+  }
+
+    @layer base {
+  
+      input[type='number']::-webkit-outer-spin-button,
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number'] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield !important;
+      }
+    }
+
+  /* FORM CREDIT CARD */
+
+  .credit-card-form {
+    @apply w-full grid grid-cols-1 md:grid-cols-4 gap-4 
+  }
+
+  .input-credit-card-form {
+    @apply border-b border-black outline-none focus:border-orange-100 py-2
+  }
+
+  .card-credit-card-section {
+    @apply w-[400px] h-[200px] text-white
+  }
+
+  .card-credit-card {
+    @apply w-full h-full flex flex-col justify-between border px-12 py-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-blue-400
+  }
+
+  .perfil-input {
+    @apply w-auto border-b border-black outline-none focus:border-orange-100 py-2
+  }
+}   

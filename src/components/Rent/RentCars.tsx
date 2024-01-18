@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { useRent } from "../../contexts/Rent/Rent";
 import { formattedDates } from "../../util/formattedDates";
 
+import MainCar from "../../public/main-car.png";
+
 type RentCarType = {
   id: string,
   model: string,
@@ -40,7 +42,7 @@ export function RentCars() {
                   <div className="rent-car-car">
                     {car.car_image && (
                       <img
-                        src={`http://localhost:3333/uploads/${car.car_image.url}`}
+                        src={MainCar}
                         alt={car.model}
                         className="image"
                       />

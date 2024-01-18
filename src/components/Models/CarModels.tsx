@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { api } from "../../lib/axios"
 import { CarsInfo } from "../../types/CarType"
 
+import MainCar from "../../public/main-car.png"
+
 import { BsFillPersonFill } from "react-icons/bs"
 import { RentCarButton } from "../Rent/RentCarButton"
 
@@ -23,7 +25,7 @@ export function CarModels() {
             {car.car_image && (
               <img
                 width={250}
-                src={`http://localhost:3333/uploads/${car.car_image.url}`}
+                src={MainCar}
                 alt={car.model}
                 className="image"
               />

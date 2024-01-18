@@ -9,6 +9,8 @@ import { useRent } from "../../contexts/Rent/Rent";
 import { TotalValueAndAmountInInstallments } from "./TotalValueAndAmountInInstallments";
 import { formattedDates } from "../../util/formattedDates";
 
+import MainCar from "../../public/main-car.png";
+
 type ICarId = {
   carId: string;
 };
@@ -49,11 +51,7 @@ export function RentCar() {
         <div className="col-span-2 flex flex-col gap-3">
           <div className="grid grid-cols-1 md:grid-cols-2 border border-gray-100 p-2">
             <div className="rent-car-car">
-              {car?.car_image && (
-                <img
-                  src={`http://localhost:3333/uploads/${car?.car_image.url}`}
-                />
-              )}
+              {car?.car_image && <img src={MainCar} />}
               <div className="text-center">
                 <p className="text-center text-base font-semibold">
                   {car?.model}

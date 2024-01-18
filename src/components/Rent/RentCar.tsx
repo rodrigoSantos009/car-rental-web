@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { BsFillPersonFill } from "react-icons/Bs";
+import { BsFillPersonFill } from "react-icons/bs";
 import { CarInfo } from "../../types/CarType";
 
 import { api } from "../../lib/axios";

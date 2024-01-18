@@ -1,4 +1,4 @@
-import { BsFillFileEarmarkPersonFill } from "react-icons/Bs";
+import { BsFillFileEarmarkPersonFill } from "react-icons/bs";
 
 export function CreditCard() {
   return (

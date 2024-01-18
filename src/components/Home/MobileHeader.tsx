@@ -1,7 +1,7 @@
 import logo from "../../public/logo.png"
 import { Link } from "react-router-dom"
 
-import { IoMdMenu, IoMdClose  } from "react-icons/Io"
+import { IoMdMenu, IoMdClose  } from "react-icons/io"
 import { useState } from "react"
 import { useAuth } from "../../contexts/Auth/UseAuth"
 

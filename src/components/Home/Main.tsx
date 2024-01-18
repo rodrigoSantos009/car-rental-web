@@ -1,5 +1,5 @@
 import { AiFillCheckCircle } from "react-icons/ai"
-import { IoArrowForwardCircleSharp } from "react-icons/Io5"
+import { IoArrowForwardCircleSharp } from "react-icons/io5"
 import mainCar from '../../public/main-car.png'
 
 export function Main() {

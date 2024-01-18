@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CarsInfo } from "../../types/CarType";
 import { api } from "../../lib/axios";
-import { BsFillPersonFill } from "react-icons/Bs";
+import { BsFillPersonFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useRent } from "../../contexts/Rent/Rent";
 import { formattedDates } from "../../util/formattedDates";

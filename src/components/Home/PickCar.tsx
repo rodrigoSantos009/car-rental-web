@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/Bs";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 import { slides } from "./ImageSlider";
 

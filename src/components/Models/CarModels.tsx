@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { api } from "../../lib/axios"
 import { CarsInfo } from "../../types/CarType"
 
-import { BsFillPersonFill } from "react-icons/Bs"
+import { BsFillPersonFill } from "react-icons/bs"
 import { RentCarButton } from "../Rent/RentCarButton"
 
 export function CarModels() {

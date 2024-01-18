@@ -1,9 +1,8 @@
 import { HiLocationMarker, HiOutlineSearch } from "react-icons/hi"
-import { BsCalendar2DateFill } from "react-icons/Bs"
+import { BsCalendar2DateFill } from "react-icons/bs"
 
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { RentContext } from "../../contexts/Rent/Index"
 import { useRent } from "../../contexts/Rent/Rent"
 import { verifyValidDate } from "../../util/verifyValidDate"
 

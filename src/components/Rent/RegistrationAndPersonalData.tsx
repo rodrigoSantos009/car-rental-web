@@ -1,7 +1,7 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { IoIosInformationCircle } from "react-icons/Io"
+import { IoIosInformationCircle } from "react-icons/io"
 import { Form } from "./Form";
 import { CreditCardForm } from "./CreditCardForm";
 import { useRent } from "../../contexts/Rent/Rent";

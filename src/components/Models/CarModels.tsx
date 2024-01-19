@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { api } from "../../lib/axios"
 import { CarsInfo } from "../../types/CarType"
+import ReactLoading from "react-loading";
 
 import MainCar from "../../public/main-car.png"
 
@@ -9,16 +10,27 @@ import { RentCarButton } from "../Rent/RentCarButton"
 
 export function CarModels() {
   const [cars, setCars] = useState<CarsInfo>([])
+  const [isLoading, setIsloading] = useState(true);
+
+  const fetchData = async () => {
+    try {
+      const response = await api.get("/cars");
+      setCars(response.data);
+    } catch (error) {
+      console.error("Error fetching car data:", error);
+    } finally {
+      setIsloading(false);
+    }
+  };
 
   useEffect(() => {
-    api.get("/cars").then((res) => {
-      setCars(res.data);
-    });
+    fetchData();
   }, []); 
-
+  console.log(cars);
   return (
     <div className="models">
       <h1>Grupo de Carros</h1>
+      {isLoading ? <ReactLoading type="bars" color="black" /> : null}
       <div className="models-car">
         {cars.map((car, id) => (
           <div key={id} className="cars">

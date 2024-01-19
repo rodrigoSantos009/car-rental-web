@@ -5,6 +5,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useRent } from "../../contexts/Rent/Rent";
 import { formattedDates } from "../../util/formattedDates";
+import ReactLoading from "react-loading";
 
 import MainCar from "../../public/main-car.png";
 
@@ -16,15 +17,22 @@ type RentCarType = {
 
 export function RentCars() {
   const rent = useRent();
-  const [cars, setCars] = useState<CarsInfo>([])
+  const [cars, setCars] = useState<CarsInfo>([]);
+  const [isLoading, setIsloading] = useState(true);
   const navigate = useNavigate()
 
   const date = formattedDates(rent.rentDate, rent.returnDate);
 
   useEffect(() => {
-    api.get("/cars").then((res) => {
-      setCars(res.data);
-    });
+    try {
+      api.get("/cars").then((res) => {
+        setCars(res.data);
+      });
+    } catch (error) {
+      throw new Error();
+    } finally {
+      setIsloading(false);
+    }
   }, []);
 
   function handleSelect(data: RentCarType) {
@@ -36,16 +44,13 @@ export function RentCars() {
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3">
         <div className="flex col-span-2">
           <div className="flex flex-col grow">
+            {isLoading ? <ReactLoading type="bars" color="black" /> : null}
             {cars.map((car, index) => (
               <div key={index} className="w-full flex flex-col gap-3 grow">
                 <div className="grid grid-cols-1 md:grid-cols-2 border border-gray-100 p-2 mb-2">
                   <div className="rent-car-car">
                     {car.car_image && (
-                      <img
-                        src={MainCar}
-                        alt={car.model}
-                        className="image"
-                      />
+                      <img src={MainCar} alt={car.model} className="image" />
                     )}
                     <div className="text-center">
                       <p className="text-center text-base font-semibold">

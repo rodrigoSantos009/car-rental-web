@@ -25,15 +25,15 @@ export function Login() {
       const success = await auth.authenticate(email, password);
       if (success) {
         if (window.location.href === LOGIN_URL) navigate("/");
-        window.location.href;
+          window.location.href;
+      }else {
+        setError(true);
+        setTimeout(() => {
+          setError(false);
+        }, 3000);
       }
-      setError(true);
-      setTimeout(() => {
-        setError(false);
-      }, 3000);
     } catch (e) {
-      console.log("Faild", email, password);
-      console.log("Email ou senha inválidos", e);
+      console.error("Failed to authenticate", e);
     }
   }
 

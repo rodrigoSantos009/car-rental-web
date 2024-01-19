@@ -6,7 +6,8 @@ import React from "react";
 import { useAuth } from "../../contexts/Auth/UseAuth";
 
 export function Login() {
-  const LOGIN_URL = "http://localhost:5173/login";
+  const LOGIN_URL =
+    "https://car-rental-9w7te1m4r-rodrigosantos009.vercel.app/login";
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");

@@ -23,7 +23,7 @@ export function RentCars() {
 
   const date = formattedDates(rent.rentDate, rent.returnDate);
 
-  useEffect(() => {
+  const fetchData = async () => {
     try {
       api.get("/cars").then((res) => {
         setCars(res.data);
@@ -33,6 +33,10 @@ export function RentCars() {
     } finally {
       setIsloading(false);
     }
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
 
   function handleSelect(data: RentCarType) {

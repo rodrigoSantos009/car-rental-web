@@ -6,10 +6,7 @@ export const ProtectedLayout = ({ children }: { children: JSX.Element }) => {
 
   if (!auth.token) {
     return (
-      <div>
-        <h1 className="text-center">Você não tem acesso! Cadastre-se ou entre em sua conta.</h1>
-        <Login />
-      </div>
+      <Login />
     );  
   } 
 

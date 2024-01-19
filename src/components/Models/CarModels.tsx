@@ -26,7 +26,7 @@ export function CarModels() {
   useEffect(() => {
     fetchData();
   }, []); 
-  console.log(cars);
+
   return (
     <div className="models">
       <h1>Grupo de Carros</h1>

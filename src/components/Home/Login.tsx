@@ -6,8 +6,7 @@ import React from "react";
 import { useAuth } from "../../contexts/Auth/UseAuth";
 
 export function Login() {
-  const LOGIN_URL =
-    "https://car-rental-9w7te1m4r-rodrigosantos009.vercel.app/login";
+  const LOGIN_URL = "/login";
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -15,6 +14,8 @@ export function Login() {
   const [error, setError] = useState(false);
 
   const auth = useAuth();
+
+  const baseUrl = window.location.href.replace(/\/login$/, "");
 
   async function handleLogin(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -25,7 +26,7 @@ export function Login() {
     try {
       const success = await auth.authenticate(email, password);
       if (success) {
-        if (window.location.href === LOGIN_URL) navigate("/");
+        if (window.location.href === baseUrl+LOGIN_URL) navigate("/");
           window.location.href;
       }else {
         setError(true);

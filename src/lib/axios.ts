@@ -2,7 +2,7 @@ import axios from "axios";
 import { SetUserLocalStorage } from "../contexts/Auth/Util";
 
 export const api = axios.create({
-  baseURL: "https://car-rental-server-cfu3.onrender.com",
+  baseURL: "https://car-rentar-server.vercel.app/",
 });
 
 api.interceptors.response.use(
